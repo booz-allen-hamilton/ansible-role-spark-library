@@ -1,0 +1,8 @@
+version: 1.5.2
+package_type: hadoop2.6
+dist_version: spark-{{ version }}-bin-{{ package_type }}
+dist_file: "{{ dist_version }}.tgz"
+dist_checksum: sha512:7D10A5C283AD5DE1DEC0E062EDCDC2CC04131CFC5D0047B42E5A4F9E4B35C5036F8F0DFCFAB990D71052756010F40EAD04C5A19EF93E68DFBFFD26CE13B7F605
+download_url: "{{ apache_mirror }}/spark/spark-{{ version }}/{{ dist_file }}"
+install_dir: /opt/{{ dist_version }}
+install_dir_symlink: /opt/spark

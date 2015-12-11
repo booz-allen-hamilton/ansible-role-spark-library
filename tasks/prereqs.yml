@@ -1,0 +1,8 @@
+---
+- name: Add EPEL repo - CentOS 7
+  yum: name=https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm state=present
+
+- name: Install Java JDK 1.8
+  yum: name={{ item }}
+  with_items:
+   - java-1.8.0-openjdk-devel
