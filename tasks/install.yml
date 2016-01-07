@@ -8,14 +8,6 @@
 - name: Extract archive
   unarchive: src=/opt/{{ dist_file }} dest=/opt copy=no
 
-- name: Change ownership of installation
-  file:
-    path: "{{ install_dir }}"
-    owner: "{{ ansible_ssh_user }}"
-    group: "{{ ansible_ssh_user }}"
-    state: directory
-    recurse: yes
-
 - name: Make symlink
   file:
     src: "{{ install_dir }}"
